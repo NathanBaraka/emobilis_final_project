@@ -24,15 +24,4 @@ class Booking(models.Model):
     def __str__(self):
         return f"{self.name} - {self.room_type} ({self.checkin} to {self.checkout})"
 
-class Payment(models.Model):
-    booking = models.OneToOneField(Booking, on_delete=models.CASCADE)
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
-    payment_date = models.DateTimeField(auto_now_add=True)
-    payment_status = models.CharField(max_length=50, choices=[
-        ('Pending', 'Pending'),
-        ('Completed', 'Completed'),
-        ('Failed', 'Failed'),
-    ])
 
-    def __str__(self):
-        return f"Payment for Booking {self.booking.id}"

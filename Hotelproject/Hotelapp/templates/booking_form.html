@@ -1,0 +1,17 @@
+<!-- booking_form.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{% if booking and booking.id %}Edit{% else %}Add New{% endif %} Booking</h1>
+
+<form method="post" action="{% if booking and booking.id %}{% url 'booking_update' booking.pk %}{% else %}{% url 'booking' %}{% endif %}">
+    {% csrf_token %}
+    {{ form.as_p }} <!-- This line renders the entire form fields -->
+
+    <button type="submit" class="btn btn-primary">{% if booking and booking.id %}Save{% else %}Add{% endif %} Booking</button>
+</form>
+
+<a href="{% url 'booking_list' %}" class="btn btn-secondary">Back to Booking List</a>
+{% endblock %}
+
+

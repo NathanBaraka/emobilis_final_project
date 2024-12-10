@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: red;
+  background: linear-gradient(to bottom, rgb(6, 108, 100), rgb(14, 48, 122));
+  width: 800px;
+  height: 400px;
+  margin: 10% auto;
+  border-radius: 5px;
+}
+
+.content-holder {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-top: 15%;
+  padding: 50px;
+}
+
+.content-holder h2 {
+  font-size: 34px;
+  margin: 20px auto;
+}
+
+.content-holder p {
+  margin: 30px auto;
+}
+
+.content-holder button {
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: white;
+  width: 150px;
+  margin: 20px auto;
+}
+
+.box-2 {
+  background-color: white;
+  margin: 5px;
+}
+
+.login-form-container {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.login-form-container h1 {
+  color: black;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.input-field {
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid rgb(168, 168, 168);
+  width: 250px;
+  outline: none;
+}
+
+.login-button {
+  box-sizing: border-box;
+  color: white;
+  font-size: 14px;
+  padding: 13px;
+  border-radius: 7px;
+  border: none;
+  width: 250px;
+  outline: none;
+  background-color: rgb(56, 102, 189);
+}
+
+/* Template CSS */
+:root {
+  --primary: #FEA116;
+  --light: #F1F8FF;
+  --dark: #0F172B;
+}
+
+.fw-medium {
+  font-weight: 500 !important;
+}
+
+.fw-semi-bold {
+  font-weight: 600 !important;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+/* Spinner */
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Button */
+.btn {
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+  color: #FFFFFF;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 2px;
+}
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+}
+
+/* Header */
+.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 43, .7);
+  z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 768px) {
+  #header-carousel .carousel-item {
+    position: relative;
+    min-height: 450px;
+  }
+
+  #header-carousel .carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.page-header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header-inner {
+  background: rgba(15, 23, 43, .7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--light);
+}
+
+.booking {
+  position: relative;
+  margin-top: -100px !important;
+  z-index: 1;
+}
+
+/* Section Title */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  left: -55px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  right: -55px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+  display: none;
+}
+
+/* Service */
+.service-item {
+  height: 320px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  transition: .5s;
+}
+
+.service-item:hover {
+  background: var(--primary);
+}
+
+.service-item .service-icon {
+  margin: 0 auto 30px auto;
+  width: 65px;
+  height: 65px;
+  transition: .5s;
+}
+
+.service-item i,
+.service-item h5,
+.service-item p {
+  transition: .5s;
+}
+
+.service-item:hover i,
+.service-item:hover h5,
+.service-item:hover p {
+  color: #FFFFFF !important;
+}
+
+/* Youtube Video */
+.video {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/video.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video .btn-play {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  padding: 18px 20px 18px 28px;
+}
+
+.video .btn-play:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video .btn-play:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: pulse 1500ms ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: .5;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    width: 90px;
+    height: 90px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Carousel */
+#header-carousel .carousel-inner .carousel-item {
+  height: 90vh;
+}
+
+#header-carousel .carousel-inner .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
